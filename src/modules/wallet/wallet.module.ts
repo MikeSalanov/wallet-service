@@ -17,7 +17,7 @@ import { HttpModule } from "@nestjs/axios";
               type: 'direct',
             },
           ],
-          uri: 'amqp://guest:guest@localhost',
+          uri: process.env.RABBIT_URL as string,
           connectionInitOptions: { wait: false, reject: false },
           enableControllerDiscovery: true,
           queues: [
