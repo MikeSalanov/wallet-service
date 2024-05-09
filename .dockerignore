@@ -1,0 +1,7 @@
+.gitignore
+.env
+.idea
+.git
+node_modules
+.DS_Store
+dist

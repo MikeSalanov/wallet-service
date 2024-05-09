@@ -29,7 +29,8 @@ export class WalletService {
           user_id: message.user_id
         }
       });
-      if (foundUserWalletData.publicAddress !== undefined) return;
+      console.log('foundUserWalletData', foundUserWalletData);
+      if (foundUserWalletData) return;
       const provider: AbstractProvider = ethers.getDefaultProvider('homestead');
       const wallet: ethers.HDNodeWallet =
         ethers.Wallet.createRandom().connect(provider);
